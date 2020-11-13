@@ -1,0 +1,32 @@
+♥ 装饰器模式:
+	1.定义一个抽象组件;
+	2.定义一个抽象装饰者,继承抽象组件(保持类型一致);
+	3.具体装饰者继承抽象装饰者(保持类型一致),组合抽象组件(自身也可以作为抽象组件)
+
+♥ 设计原则：
+	1.抽离可变之处
+	2.针对接口编程,而不是针对实现编程
+	3.多用组合,少用继承
+	4.使交互对象之间松耦合
+	4.类应该对扩展开放,对修改关闭
+	5.依赖倒置原则:依赖抽象,不依赖具体类(只继承接口,变量不持有具体类的引用,不要覆盖父类已实现的方法)
+	6.
+
+♥ 单例模式:
+	1.懒汉,饿汉(非LazyLoading)
+	2.DCL(双重校验锁)
+	3.静态内部类/静态代码块
+	4.enum枚举类
+	5.序列化反序列化
+	
+♥ Spring用到的设计模式：
+	1.策略模式: 资源访问接口
+	2.单例模式: Bean的scope默认是单例模式
+	3.工厂模式: BeanFactory和ApplicationContext创建Bean
+	4.代理模式: cglib动态代理实现AOP
+	5.观察者模式: 事务驱动模型
+	6.适配器模式: SpringMVC的HandlerAdapter;
+		① DispatchServlet根据HandlerMapping返回handler;
+		② HandlerAdapter找到对应handler处理.
+	7.装饰器模式: Wrapper类和Decorator类
+	8.模板方法模式: Template类(JdbcTemplate),Spring使用CallBack配合模板方法,代码复用+灵活
